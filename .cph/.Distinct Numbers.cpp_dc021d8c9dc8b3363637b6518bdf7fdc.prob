@@ -1,0 +1,1 @@
+{"name":"Local: Distinct Numbers","url":"/Users/ibnomarromel/Desktop/Competitive Programming/CSES/Distinct Numbers.cpp","tests":[{"id":1712599274503,"input":"5\n2 3 2 2 3","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/ibnomarromel/Desktop/Competitive Programming/CSES/Distinct Numbers.cpp","group":"local","local":true}
