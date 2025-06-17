@@ -14,28 +14,28 @@ using namespace std;
 #define fr(a, b) for(int i = a; i < b; i++) 
 
 
-void solve() { // this approach works, but gets TLE
+// void solve() { // this approach works, but gets TLE
 
-    int n;
-    cin >> n;
-    vector<int>vec(n);
+//     int n;
+//     cin >> n;
+//     vector<int>vec(n);
 
-    for (int i = 1; i <= n; i++) {
-        vec[i-1] = i; 
-    }
+//     for (int i = 1; i <= n; i++) {
+//         vec[i-1] = i; 
+//     }
 
-    int i = 0;
-    int k = 2;
+//     int i = 0;
+//     int k = 2;
 
-    while(vec.size() > 0) {
+//     while(vec.size() > 0) {
 
-        int position = (i + k -1) % n; // finding the position
-        cout << vec[position] << " ";
-        vec.erase(vec.begin() + position); // erasing the value
-        i = position; // new position
-        n = vec.size(); // new size of array
-    }
-}
+//         int position = (i + k -1) % n; // finding the position
+//         cout << vec[position] << " ";
+//         vec.erase(vec.begin() + position); // erasing the value
+//         i = position; // new position
+//         n = vec.size(); // new size of array
+//     }
+// }
 
 
 void solve() {
