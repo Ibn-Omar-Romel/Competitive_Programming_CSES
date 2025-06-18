@@ -16,33 +16,22 @@ using namespace std;
 
 void solve() {
 
-    int n, sum;
-    cin >> n >> sum;
-    vector<int>vec(n);
-    ll total = 0;
+    ll n, k;
+    cin >> n >> k;
+
+    ll prefixSum = 0, count = 0; // prefixSum has all total sum, count has count
+    map<ll, ll>mp; // to store the prefix sum
+    mp[0]++; // negative value, so sum can be zero, intitally sum if zero
+
     for (int i = 0; i < n; i++) {
-        cin >> vec[i];
-        total += vec[i];
+        ll a; cin >> a;
+        prefixSum += a;
+
+        ll extra = prefixSum - k; // if current sum if S, if there is a value S-k in the array, then there is k value also
+        count += mp[extra]; // if the value exists then mp[S-k] will be added
+        mp[prefixSum]++; // new prefix sum is updated.
     }
-
-    int i = 0, j = 0;
-    int current_sum = 0;
-
-    int ans = 0;
-
-    while(j < n) {
-
-        current_sum += vec[j];
-        while(current_sum >= sum) {
-            if (current_sum == sum){
-                ans++;
-            }
-            current_sum -= vec[i];
-            i++;
-        }
-        j++;
-    }
-    cout << ans << endl;
+    cout << count << endl;
 }
 
 
